@@ -3,7 +3,7 @@
       <div class="my-10 relative">
           <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div class="absolute inset-0">
-              <img class="h-full w-full object-cover" src="https://www.helcim.com/images/overview-credit-card-processing-transaction-types.jpg" alt="People working on laptops" />
+              <img class="h-full w-full object-cover" src="../../assets/img/overview-credit-card-processing-transaction-types.jpg" alt="People working on laptops" />
               <div class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply" />
             </div>
             <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
