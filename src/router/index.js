@@ -41,4 +41,15 @@ const router = createRouter({
     ],
 });
 
+router.beforeEach((to, from, next) => {
+    if (to.name !== "SignInView" && to.name !== "RegisterView") {
+        const user = localStorage.getItem("user");
+        if (!user) {
+            return next("/signin");
+        }
+        return next();
+    }
+    return next();
+})
+
 export default router;

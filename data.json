@@ -1,0 +1,226 @@
+{
+  "users": [
+    {
+      "email": "example@mail.ru",
+      "username": "User",
+      "password": "12345678"
+    },
+    {
+      "id": 0.8726930406215374,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.2881014137494027,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.2523370786524233,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.02933300233133207,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.16417401149393296,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.07028618291088007,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.9939776386823156,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.5961540299884751,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.26750911892228,
+      "email": "1234@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": 0.49133284442613623,
+      "email": "1234@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 0.22326493291529736,
+      "email": "1234@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 0.09502903963568698,
+      "email": "1234@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 0.6387640847573053,
+      "email": "1234@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 1.9939776386823156
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 2.9939776386823156
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 3.9939776386823156
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 4.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 5.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 6.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 7.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 8.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 9.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 10.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 11.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "password": "1234",
+      "id": 12.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 13.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 14.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 15.993977638682315
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 16.993977638682317
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 17.993977638682317
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 18.993977638682317
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 19.993977638682317
+    },
+    {
+      "email": "1234@gmail.com",
+      "username": "User",
+      "password": "1234",
+      "id": 20.993977638682317
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "card_number": "1234 5678 9876 5432",
+      "date": "12/24",
+      "cardholder": "CARDHOLDER NAME",
+      "cvc": "232"
+    },
+    {
+      "id": "2",
+      "card_number": "1234 5678 9876 5432",
+      "date": "03/24",
+      "cardholder": "CARDHOLDER NAME",
+      "cvc": "232"
+    },
+    {
+      "id": "3",
+      "card_number": "1234 5678 9876 5432",
+      "date": "09/28  ",
+      "cardholder": "CARDHOLDER NAME",
+      "cvc": "232"
+    },
+    {
+      "id": "4",
+      "card_number": "1234 5678 9876 5432",
+      "date": "09/28  ",
+      "cardholder": "CARDHOLDER NAME",
+      "cvc": "232"
+    },
+    {
+      "id": "5",
+      "card_number": "1234 5678 9876 5432",
+      "date": "09/28  ",
+      "cardholder": "CARDHOLDER NAME",
+      "cvc": "232"
+    },
+    {
+      "id": "6",
+      "card_number": "1234 5678 9876 5432",
+      "date": "09/28  ",
+      "cardholder": "CARDHOLDER NAME",
+      "cvc": "232"
+    }
+  ]
+}

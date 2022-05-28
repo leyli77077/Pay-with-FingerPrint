@@ -15,46 +15,42 @@
             </DisclosureButton>
           </div>
           <div class="flex-shrink-0 flex items-center">
-            <img 
+            <img
               class="w-20 h-20"
-              src="https://icons-for-free.com/iconfiles/png/512/card+credit+card+debit+card+master+card+icon-1320184902079563557.png" 
-              alt="">
-            <span class="text-xl font-medium">
-              Payment Security
-            </span>
+              src="https://icons-for-free.com/iconfiles/png/512/card+credit+card+debit+card+master+card+icon-1320184902079563557.png"
+              alt=""
+            />
+            <span class="text-xl font-medium"> Payment Security </span>
           </div>
           <div class="hidden md:ml-6 md:flex md:space-x-8">
             <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
             <router-link
-              :to="{name:'Home'}"
+              :to="{ name: 'Home' }"
               class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
               active-class="border-indigo-500 border-b-2"
             >
               Home
             </router-link>
             <router-link
-              :to="{name:'PaymentList'}"
+              :to="{ name: 'PaymentList' }"
               class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
               active-class="border-indigo-500 border-b-2"
             >
-              My Carts
+              My Cards
             </router-link>
-              
-            
           </div>
         </div>
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <router-link
-            :to="{name:'AddPayment'}"
+              :to="{ name: 'AddPayment' }"
               class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               <PlusSmIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
-              <span>Add Cart</span>
+              <span>Add Card</span>
             </router-link>
           </div>
           <div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
-
             <!-- Profile dropdown -->
             <Menu as="div" class="ml-3 relative">
               <div>
@@ -63,15 +59,31 @@
                 >
                   <div class="flex items-center">
                     <div>
-                      <span class="inline-block h-10 w-10 rounded-full overflow-hidden bg-gray-100">
-                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                      <span
+                        class="inline-block h-10 w-10 rounded-full overflow-hidden bg-gray-100"
+                      >
+                        <svg
+                          class="h-full w-full text-gray-300"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"
+                          />
                         </svg>
                       </span>
                     </div>
                     <div class="ml-3">
-                      <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">User User</p>
-                      <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+                      <p
+                        class="text-sm font-medium text-gray-700 group-hover:text-gray-900"
+                      >
+                        {{ user.username }}
+                      </p>
+                      <p
+                        class="text-xs font-medium text-gray-500 group-hover:text-gray-700"
+                      >
+                        View profile
+                      </p>
                     </div>
                   </div>
                 </MenuButton>
@@ -88,34 +100,40 @@
                   class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-[9999]"
                 >
                   <MenuItem v-slot="{ active }">
-                    <a
-                      href="#"
+                    <button
+                      class="w-full"
                       :class="[
                         active ? 'bg-gray-100' : '',
                         'block px-4 py-2 text-sm text-gray-700',
                       ]"
-                      >Your Profile</a
+                      @click="showModalProfile"
                     >
+                      Your Profile
+                    </button>
                   </MenuItem>
                   <MenuItem v-slot="{ active }">
-                    <a
-                      href="#"
+                    <button
+                      class="w-full"
                       :class="[
                         active ? 'bg-gray-100' : '',
                         'block px-4 py-2 text-sm text-gray-700',
                       ]"
-                      >Settings</a
+                      @click="showModalSettings"
                     >
+                      Add Fingerprint
+                    </button>
                   </MenuItem>
                   <MenuItem v-slot="{ active }">
-                    <a
-                      href="#"
+                    <button
+                      class="w-full"
                       :class="[
                         active ? 'bg-gray-100' : '',
                         'block px-4 py-2 text-sm text-gray-700',
                       ]"
-                      >Sign out</a
+                      @click="logout"
                     >
+                      Sign out
+                    </button>
                   </MenuItem>
                 </MenuItems>
               </transition>
@@ -129,13 +147,13 @@
       <div class="pt-2 pb-3 space-y-1">
         <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
         <router-link
-          :to="{name:'Home'}"
+          :to="{ name: 'Home' }"
           class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
           active-class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
           >Home
         </router-link>
         <router-link
-          :to="{name:'PaymentList'}"
+          :to="{ name: 'PaymentList' }"
           class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
           active-class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
           >Payment List
@@ -167,13 +185,15 @@
             as="a"
             href="#"
             class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 sm:px-6"
+            @click="showModalProfile"
             >Your Profile</DisclosureButton
           >
           <DisclosureButton
             as="a"
             href="#"
             class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 sm:px-6"
-            >Settings</DisclosureButton
+            @click="showModalSettings"
+            >Add Fingerprint</DisclosureButton
           >
           <DisclosureButton
             as="a"
@@ -184,6 +204,8 @@
         </div>
       </div>
     </DisclosurePanel>
+    <ModalSettings :show="modalSettingsShowed" :close="closeModalSettings" />
+    <ModalProfile :show="modalProfileShowed" :close="closeModalProfile" />
   </Disclosure>
 </template>
 
@@ -199,4 +221,36 @@ import {
 } from "@headlessui/vue";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 import { PlusSmIcon } from "@heroicons/vue/solid";
+import { ref } from "vue";
+import router from "../../router";
+import ModalSettings from "../Modal/ModalSettings.vue";
+import ModalProfile from "../Modal/ModalProfile.vue";
+
+const modalSettingsShowed = ref(false);
+const modalProfileShowed = ref(false);
+
+function showModalSettings() {
+  modalSettingsShowed.value = true;
+}
+
+function closeModalSettings() {
+  modalSettingsShowed.value = false;
+}
+
+function showModalProfile() {
+  modalProfileShowed.value = true;
+}
+
+function closeModalProfile() {
+  modalProfileShowed.value = false;
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  router.push({
+    name: "HomeView",
+  });
+}
+
+const user = ref(JSON.parse(localStorage.getItem("user")));
 </script>

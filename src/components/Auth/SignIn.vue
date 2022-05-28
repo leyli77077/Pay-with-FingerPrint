@@ -1,3 +1,27 @@
+<script setup>
+import { ref } from "vue";
+import axios from "axios";
+import router from "../../router";
+
+const email = ref("");
+const password = ref("");
+
+async function onSubmit() {
+  if (!email.value || !password.value) {
+    return;
+  }
+
+  const res = await axios.get(
+    `http://localhost:3000/users?email=${email.value}&password=${password.value}`
+  );
+
+  if (res.data.length > 0) {
+    localStorage.setItem("user", JSON.stringify(res.data[0]));
+    router.push("/");
+  }
+}
+</script>
+
 <template>
   <div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
@@ -8,7 +32,12 @@
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
       <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-        <form class="space-y-6" action="#" method="POST">
+        <form
+          @submit.prevent="onSubmit"
+          class="space-y-6"
+          action="#"
+          method="POST"
+        >
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700">
               Email address
@@ -17,6 +46,7 @@
               <input
                 id="email"
                 name="email"
+                v-model="email"
                 type="email"
                 autocomplete="email"
                 class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -35,6 +65,7 @@
               <input
                 id="password"
                 name="password"
+                v-model="password"
                 type="password"
                 autocomplete="current-password"
                 class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -81,9 +112,12 @@
               <div class="w-full border-t border-gray-300" />
             </div>
             <div class="relative flex justify-center text-sm">
-              <a href="" class="px-2 bg-white text-blue-700">
+              <router-link
+                :to="{ name: 'RegisterView' }"
+                class="px-2 bg-white text-blue-700"
+              >
                 Doesn't have account? Register
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
