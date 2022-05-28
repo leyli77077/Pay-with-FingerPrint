@@ -1,5 +1,7 @@
-<script setup></script>
-
 <template>
-  <div class="text-center text-black">Salam</div>
+  <div class="text-center text-black">
+    <router-view></router-view>
+  </div>
 </template>
+
+
